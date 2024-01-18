@@ -9,7 +9,7 @@ const HomePage = () => {
     return (
         <>
             <Link
-                
+                exact
                 to="/login"
             >
                 Login

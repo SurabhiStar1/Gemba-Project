@@ -48,25 +48,25 @@ const DashBoard = () => {
             <Box sx={{ display: 'flex', backgroundColor: "#BFCBCE" }}>
                 <Drawer variant="permanent" open={true} sx={{ overflowX: 'hidden', background: 'red' }}>
                     <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', px: [1], width: '96%', cursor: 'pointer', backgroundColor: "#303655" }} onClick={() => { navigate('/dashboard/home') }}>
-                        <div style={{ fontSize: '22px', fontWeight: "600", lineHeight: "28px", display: 'flex', alignItems: 'center', marginLeft: '20%', color: "white" }}>
+                        <Typography sx={{ fontSize: '22px', fontWeight: "600", lineHeight: "28px", display: 'flex', alignItems: 'center', ml: 5, color: "white" }}>
                             <img src={Applogo} alt="" style={{ width: "12%", paddingRight: '4px' }} />
-                            <div>Your Logo</div>
-                        </div>
+                            <p>Your Logo</p>
+                        </Typography>
                     </Toolbar>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', backgroundColor: "#303655" }}>
                         <List sx={{ pl: 5, fontFamily: `'Inter', sans-serif` }}>
-                            <NavLink to='home' style={{ textDecoration: "none", color: "white" }}>
+                            <NavLink exact to='home' style={{ textDecoration: "none", color: "white" }}>
                                 <ListItem sx={{ backgroundColor: window.location.pathname.split('/')[2] === 'home' ? 'green' : 'none', borderRadius: "50px 0px 0px 50px", borderRight: window.location.pathname.split('/')[2] === 'home' ? "4px solid #7953FF" : 'none', width: "100%", mb: 2 }}>
                                     <HomeIcon alt="" style={{ marginRight: 10 }} />Home
                                 </ListItem>
                             </NavLink>
-                            <NavLink to='form' style={{ textDecoration: "none", color: "white", }}>
+                            <NavLink exact to='form' style={{ textDecoration: "none", color: "white", }}>
                                 <ListItem
                                     sx={{ backgroundColor: window.location.pathname.split('/')[2] === 'form' ? 'green' : 'none', borderRadius: "50px 0px 0px 50px", borderRight: window.location.pathname.split('/')[2] === 'form' ? "4px solid #7953FF" : 'none', width: "100%", mb: 2 }}>
                                     <FeedIcon alt="" style={{ marginRight: 10 }} />Form
                                 </ListItem>
                             </NavLink>
-                            <NavLink to='table' style={{ textDecoration: "none", color: "white", }}>
+                            <NavLink exact to='table' style={{ textDecoration: "none", color: "white", }}>
                                 <ListItem
                                     sx={{ backgroundColor: window.location.pathname.split('/')[2] === 'table' ? 'green' : 'none', borderRadius: "50px 0px 0px 50px", borderRight: window.location.pathname.split('/')[2] === 'table' ? "4px solid #7953FF" : 'none', width: "100%", mb: 2 }}>
                                     <ViewListIcon alt="" style={{ marginRight: 10 }} />Table
@@ -74,7 +74,7 @@ const DashBoard = () => {
                             </NavLink>
                         </List>
                         <List sx={{ pl: 5, fontFamily: `'Inter', sans-serif` }}>
-                            <NavLink to='profile' style={{ textDecoration: "none", color: "white", }}>
+                            <NavLink exact to='profile' style={{ textDecoration: "none", color: "white", }}>
                                 <ListItem
                                     sx={{ backgroundColor: window.location.pathname.split('/')[2] === 'profile' ? 'green' : 'none', borderRadius: "50px 0px 0px 50px", borderRight: window.location.pathname.split('/')[2] === 'profile' ? "4px solid #7953FF" : 'none', width: "100%", mb: 2 }}>
                                     <AccountBoxIcon alt="" style={{ marginRight: 10 }} />Profile
