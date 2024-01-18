@@ -15,8 +15,8 @@ import HomePage from './components/HomePage'
 const App = () => {
   return (
       <Routes>
-        <Route exact path='/' element={<HomePage />} />
-        <Route exact path='/login' element={<Login   />} />
+        <Route  path='/' element={<HomePage />} />
+        <Route  path='/login' element={<Login   />} />
         <Route path='dashboard' element={<DashBoard />}>
           <Route path='home' element={<Home />} />
           <Route path='table' element={<Table />} />
